@@ -8,6 +8,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 
 public class BaseClass {
+// Reusable code to efficiently automate common testing tasks
+	
+	//Initializing chrome application
 	public static WebDriver driver;
 
 	public WebDriver launchBrowser() {
@@ -18,29 +21,29 @@ public class BaseClass {
 		driver = new ChromeDriver(options);
 		return driver;
 	}
-
+	//Reusable code for launching url
 	public void launchUrl(WebDriver driver, String url) {
 		driver.get(url);
 		driver.manage().window().maximize();
 
 	}
-
+	//Reusable code for Sendkeys 
 	public void typeText(WebElement element, String data) {
 		element.sendKeys(data);
 
 	}
-
+	//Reusable code for clicking an element 
 	public void btnClick(WebElement element) {
 		element.click();
 
 	}
-
+	//Reusable code for Mousehover an element 
 	public void mouseHover(WebDriver driver, WebElement element) {
 		Actions mo = new Actions(driver);
 		mo.moveToElement(element).perform();
 
 	}
-
+	//Reusable code for handling tab/pop-up 
 	public void handleTab(WebDriver driver, By tabLocator) {
 		try {
 			// Check if the tab appears
@@ -54,7 +57,7 @@ public class BaseClass {
 			System.out.println("Tab not found. Continuing with regular procedures.");
 		}
 	}
-
+	//Reusable code for getting text 
 	public String srchPlayer(WebElement element) {
 		String text = element.getText();
 		return text;

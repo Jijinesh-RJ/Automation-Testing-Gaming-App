@@ -8,17 +8,13 @@ public class GameAutomation {
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws Exception {
 
-		// Create a new instance of the ChromeDriver
 		BaseClass b = new BaseClass();
 		WebDriver driver = b.launchBrowser();
-		GamePojo gp = new GamePojo();
-		
-		// Navigate to the webpage
-		
+		GamePojo gp = new GamePojo();	
 		b.launchUrl(driver, "https://www.gamepoint.com/login.php?exitUrl=applet.php&guest=1&loginType=guest");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		b.typeText(gp.getTxtUser(), "nemaQA");
-		b.typeText(gp.getTxtPass(), "Jijinesh123");
+		b.typeText(gp.getTxtUser(), "Add your Username"); //Add your username here
+		b.typeText(gp.getTxtPass(), "Add your Password"); //Add your password here
 		b.btnClick(gp.getBtnLogin());
 		b.btnClick(gp.getLogoImg());
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
