@@ -23,8 +23,7 @@ public class GameAutomation {
 		gp.getPlayBtn().click();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		By tabLocator = By.xpath("//img[@class='closeOverlay gpui-closebutton']");
-        // Close the tab if it appears
-		b.handleTab(driver, tabLocator);
+        	b.handleTab(driver, tabLocator);
 		driver.switchTo().frame(gp.getToFrame());
 		gp.getStartScrnBtn().click();
 		gp.getBetBtn().click();
