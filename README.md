@@ -1,4 +1,4 @@
-Welcome to my Game Automation Testing Repository! 🎮 Here, we focus on ensuring the quality and reliability of the game applications through automated testing methodologies. This repository includes advanced techniques such as the Page Object Model (POM), reusable codes, and seamless integration with Maven for efficient and effective testing workflows.
+Welcome to my Game Automation Testing Repository! 🎮 Here, we focus on ensuring the quality and reliability of the game application through automated testing methodologies. This repository includes advanced techniques such as the Page Object Model (POM), reusable codes, and seamless integration with Maven for efficient and effective testing workflows.
 
 Key Features:
 
